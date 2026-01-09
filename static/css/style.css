@@ -1,0 +1,493 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f8f7;
+    color: #2e2e2e;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0b8f5a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BRANDING */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 58px;
+    width: auto;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.brand-tagline {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: background 0.25s ease;
+}
+
+nav a svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* IMAGE PLACEHOLDER (FOR FUTURE SECTIONS) */
+.image-placeholder {
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(135deg, #dfeee8, #f7f9fb);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7aa89a;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #1e1e1e;
+    color: #eaeaea;
+    padding: 28px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Footer location icon */
+.footer-location-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* FORM STYLING */
+.booking-form {
+    max-width: 520px;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.booking-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.btn-primary {
+    background: #0b8f5a;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #087148;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #0b8f5a;
+    border: 2px solid #0b8f5a;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 12px;
+    transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background: #0b8f5a;
+    color: white;
+}
+
+/* TYPOGRAPHY STANDARD */
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+/* PAGE STRUCTURE */
+.page-header {
+    margin-bottom: 40px;
+}
+
+.page-subtitle {
+    font-size: 17px;
+    color: #6b6b6b;
+    max-width: 680px;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+    margin-bottom: 50px;
+    max-width: 820px;
+}
+
+/* LEAD PARAGRAPH */
+.lead-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+/* PURPOSE GRID */
+.purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.purpose-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* SERVICES LIST */
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+/* Typography */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+    line-height: 1.7;
+    background-color: #f9fafb;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #4b5563;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-slider {
+    background: #0f766e;
+    color: #ffffff;
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-slides .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slides .slide.active {
+    opacity: 0.35;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #d1fae5;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    max-width: 750px;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Hero Location Block */
+.hero-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(16, 185, 129, 0.1); /* soft green overlay */
+    color: #065f46;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: fit-content;
+}
+
+.hero-location .location-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.btn-primary {
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #059669;
+}
+
+.btn-outline {
+    border: 2px solid #10b981;
+    color: #10b981;
+    padding: 0.7rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+/* Services Section */
+.services-section {
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Service Card */
+.service-card {
+    position: relative;
+    display: block;
+    height: 280px;
+    border-radius: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.service-overlay h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.service-overlay p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Modal styling */
+.service-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 14px;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #10b981;
+}

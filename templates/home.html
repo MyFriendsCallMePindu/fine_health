@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero hero-slider">
+    <!-- Image Slider -->
+    <div class="hero-slides">
+        <div class="slide active" style="background-image: url('{% static "images/hero_1.jpg" %}');"></div>
+        <div class="slide" style="background-image: url('{% static "images/hero_2.jpg" %}');"></div>
+        <div class="slide" style="background-image: url('{% static "images/hero_3.jpg" %}');"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content container">
+        <h1>Fine Health Diagnostic & Medical Center</h1>
+        <p class="hero-subtitle">
+            Promoting quality of life through accessible, affordable, and compassionate healthcare.
+        </p>
+
+        <p class="hero-description">
+            Located in George Compound, Lusaka, Fine Health Diagnostic & Medical Center is a
+            community-focused healthcare facility dedicated to prevention, early diagnosis,
+            and effective treatment for individuals and families.
+        </p>
+
+        <!-- Location Info -->
+        <div class="hero-location">
+            <img src="{% static 'images/fine_health/icons/location.png' %}" alt="Location Icon" class="location-icon">
+            <span>George Compound, Lusaka, Zambia</span>
+        </div>
+
+        <div class="hero-actions">
+            <a href="{% url 'contact' %}" class="btn-primary">
+                Contact Us
+            </a>
+            <a href="{% url 'book_appointment' %}" class="btn-outline">
+                Book an Appointment
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

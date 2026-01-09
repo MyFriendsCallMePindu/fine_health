@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="services-hero">
+    <div class="container">
+        <h1>Our Services</h1>
+        <p class="hero-subtitle">
+            Comprehensive healthcare services for you and your family.
+        </p>
+    </div>
+</section>
+
+<section class="services-section container">
+    <div class="services-grid">
+        <!-- Dental Services -->
+        <div class="service-card" style="background-image: url('{% static "images/services/dental.jpg" %}');" onclick="openModal('modal-dental')">
+            <div class="service-overlay">
+                <h3>Dental Services</h3>
+                <p>Professional dental care to maintain good oral health and confident smiles.</p>
+            </div>
+        </div>
+
+        <!-- Laboratory Services -->
+        <div class="service-card" style="background-image: url('{% static "images/services/laboratory.jpg" %}');" onclick="openModal('modal-lab')">
+            <div class="service-overlay">
+                <h3>Laboratory Services</h3>
+                <p>Accurate and timely diagnostic tests to support effective medical decisions.</p>
+            </div>
+        </div>
+
+        <!-- OPD Services -->
+        <div class="service-card" style="background-image: url('{% static "images/services/opd.jpg" %}');" onclick="openModal('modal-opd')">
+            <div class="service-overlay">
+                <h3>OPD – Out Patient Department</h3>
+                <p>Screening, diagnosis, treatment of common illnesses, and medical follow-ups.</p>
+            </div>
+        </div>
+
+        <!-- Consultation Services -->
+        <div class="service-card" style="background-image: url('{% static "images/services/consultation.jpg" %}');" onclick="openModal('modal-consult')">
+            <div class="service-overlay">
+                <h3>Consultation Services</h3>
+                <p>Gynecology and Urology consultations for specialized care and advice.</p>
+            </div>
+        </div>
+
+        <!-- Mother & Child Health -->
+        <div class="service-card" style="background-image: url('{% static "images/services/mch.jpg" %}');" onclick="openModal('modal-mch')">
+            <div class="service-overlay">
+                <h3>Mother & Child Health (M.C.H)</h3>
+                <p>Antenatal, family planning, and midwifery services supporting mothers and children.</p>
+            </div>
+        </div>
+
+        <!-- Radiology Services -->
+        <div class="service-card" style="background-image: url('{% static "images/services/radiology.jpg" %}');" onclick="openModal('modal-radiology')">
+            <div class="service-overlay">
+                <h3>Radiology & Diagnostic Scans</h3>
+                <p>Abdominal and pelvic scans to support accurate diagnosis and treatment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS -->
+<div id="modal-dental" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-dental')">&times;</span>
+        <h2>Dental Services</h2>
+        <p>We offer professional dental care services aimed at maintaining good oral health, preventing dental diseases, and promoting confident smiles.</p>
+    </div>
+</div>
+
+<div id="modal-lab" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-lab')">&times;</span>
+        <h2>Laboratory Services</h2>
+        <p>Our laboratory provides accurate and timely diagnostic tests to support effective medical decisions and treatment plans.</p>
+    </div>
+</div>
+
+<div id="modal-opd" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-opd')">&times;</span>
+        <h2>OPD – Out Patient Department</h2>
+        <ul>
+            <li>General health screening</li>
+            <li>Diagnosis and treatment of common illnesses</li>
+            <li>Medical follow-ups</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-consult" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-consult')">&times;</span>
+        <h2>Consultation Services</h2>
+        <h4>Gynecology</h4>
+        <p>Comprehensive women’s health services, including reproductive health consultations.</p>
+        <h4>Urology</h4>
+        <p>Specialized consultation and care for urinary tract and male reproductive health conditions.</p>
+    </div>
+</div>
+
+<div id="modal-mch" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-mch')">&times;</span>
+        <h2>Mother & Child Health (M.C.H)</h2>
+        <ul>
+            <li>Antenatal booking & revisit</li>
+            <li>Family planning services</li>
+            <li>Midwifery services</li>
+        </ul>
+        <p>We support mothers and children through every stage of pregnancy and early childhood.</p>
+    </div>
+</div>
+
+<div id="modal-radiology" class="service-modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-radiology')">&times;</span>
+        <h2>Radiology & Diagnostic Scans</h2>
+        <ul>
+            <li>Abdominal scan</li>
+            <li>Pelvic scan</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- Modal Scripts -->
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.service-modal');
+    modals.forEach(modal => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+</script>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fine Health Diagnostic & Medical Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <div class="brand">
+            <img src="{% static 'images/logo.png' %}" class="logo" alt="Fine Health Logo">
+            <div class="brand-text">
+                <span class="brand-name">Fine Health</span>
+                <span class="brand-tagline">Promoting Quality of Life</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="{% url 'home' %}">
+                <!-- Home Icon -->
+                <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg>
+                Home
+            </a>
+
+            <a href="{% url 'about' %}">About</a>
+
+            <a href="{% url 'services' %}">Services</a>
+
+            <a href="{% url 'contact' %}">
+                <!-- Contact / Health Icon -->
+                <svg viewBox="0 0 24 24"><path d="M20 15.5a16.88 16.88 0 01-5.1-.8 1 1 0 00-1 .25l-2.2 2.2a16 16 0 01-7.2-7.2l2.2-2.2a1 1 0 00.25-1A16.88 16.88 0 018.5 4h3a1 1 0 001-1V1a1 1 0 00-1-1C5.6 0 0 5.6 0 12a1 1 0 001 1h3a1 1 0 001-1v-3z"/></svg>
+                Contact
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© {{ year }} Fine Health Diagnostic & Medical Center</p>
+        <p>
+            <img src="{% static 'images/fine_health/icons/location.png' %}" alt="Location Icon" class="footer-location-icon">
+            George Compound, Lusaka | ☎ +260971136241
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

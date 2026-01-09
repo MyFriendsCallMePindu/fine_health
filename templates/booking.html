@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Book an Appointment</h2>
+<p>Please fill in the form below and our team will contact you.</p>
+
+<form method="post" class="booking-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        {{ form.full_name.label_tag }}
+        {{ form.full_name }}
+    </div>
+
+    <div class="form-group">
+        {{ form.phone.label_tag }}
+        {{ form.phone }}
+    </div>
+
+    <div class="form-group">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+    </div>
+
+    <div class="form-group">
+        {{ form.service.label_tag }}
+        {{ form.service }}
+    </div>
+
+    <div class="form-group">
+        {{ form.preferred_date.label_tag }}
+        {{ form.preferred_date }}
+    </div>
+
+    <div class="form-group">
+        {{ form.message.label_tag }}
+        {{ form.message }}
+    </div>
+
+    <button type="submit" class="btn-primary">Submit Booking</button>
+</form>
+
+<div class="image-placeholder">
+    Clinic & Diagnostic Services Visual
+</div>
+
+{% endblock %}
